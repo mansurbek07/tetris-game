@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: #f9fafb;
+}
+
+.game-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+.game-panel,
+.card,
+button {
+  border: 1px solid #374151;
+  background: #1f2937;
+  border-radius: 12px;
+}
+
+.game-panel {
+  padding: 18px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 14px;
+  font-size: 28px;
+}
+
+canvas {
+  display: block;
+  background: #0b1220;
+  border-radius: 6px;
+}
+
+#game {
+  width: 300px;
+  height: 600px;
+}
+
+.controls {
+  max-width: 300px;
+  margin: 14px 0 0;
+  color: #9ca3af;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.side-panel {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  padding: 14px;
+  text-align: center;
+}
+
+.card h2 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #9ca3af;
+}
+
+.card p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.next-card canvas {
+  margin: 8px auto 0;
+  width: 120px;
+  height: 120px;
+}
+
+button {
+  padding: 12px;
+  border: 0;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.15);
+}
+
+.message {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.message > div {
+  min-width: 260px;
+  padding: 28px;
+  text-align: center;
+  background: #1f2937;
+  border: 1px solid #4b5563;
+  border-radius: 14px;
+}
+
+.message h2 {
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .game-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-panel {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .next-card,
+  button {
+    grid-column: span 2;
+  }
+}
