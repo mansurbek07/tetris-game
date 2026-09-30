@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-wrapper">
+    <section class="game-panel">
+      <h1>Tetris</h1>
+      <canvas id="game" width="300" height="600"></canvas>
+      <p class="controls">
+        ← → Move &nbsp; ↓ Soft Drop &nbsp; ↑ Rotate &nbsp; Space Hard Drop &nbsp; P Pause
+      </p>
+    </section>
+
+    <aside class="side-panel">
+      <div class="card">
+        <h2>Score</h2>
+        <p id="score">0</p>
+      </div>
+
+      <div class="card">
+        <h2>Lines</h2>
+        <p id="lines">0</p>
+      </div>
+
+      <div class="card">
+        <h2>Level</h2>
+        <p id="level">1</p>
+      </div>
+
+      <div class="card next-card">
+        <h2>Next</h2>
+        <canvas id="next" width="120" height="120"></canvas>
+      </div>
+
+      <button id="restart">Restart</button>
+    </aside>
+  </main>
+
+  <div id="message" class="message hidden">
+    <div>
+      <h2 id="message-title">Game Over</h2>
+      <p id="message-text">Press Restart to play again.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
